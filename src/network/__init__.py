@@ -1,7 +1,11 @@
-from .neural_network import NeuralNetwork
-from .connect_layer import ConnectLayer
+from network.neural_network import NeuralNetwork
+from network import layer
+from network import exceptions
+from network.types import NDShape
 
 __all__ = [
     'NeuralNetwork',
-    'ConnectLayer'
+    'layer',
+    'exceptions',
+    'NDShape'
 ]

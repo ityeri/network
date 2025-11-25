@@ -6,9 +6,10 @@ from network.types import NDShape
 
 
 class Layer(ABC):
-    def __init__(self, input_shape: NDShape, layer_shape: NDShape,):
+    def __init__(self, input_shape: NDShape, output_shape: NDShape):
         self.input_shape: NDShape = input_shape
-        self.layer_shape: NDShape = layer_shape
+        self.output_shape: NDShape = output_shape
+        self.output: NDArray | None = None
 
     @abstractmethod
     def front_propagation(self, input_layer: NDArray) -> NDArray: ...
